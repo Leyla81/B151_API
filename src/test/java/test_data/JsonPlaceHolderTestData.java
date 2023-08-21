@@ -18,4 +18,16 @@ public class JsonPlaceHolderTestData {
        }
         return expectedData;
     }
+
+    //jsonPlaceHolderdaki test datasını string e ceviren method
+    public static String convertJsonToString(Integer userId ,String title ,Boolean completed){
+        return  "{\n" +
+                "  \"userId\": "+userId+",\n" +
+                "   \"title\": \""+title+"\",\n" +
+                "   \"completed\": "+completed+"\n" +
+                " }";
+
+    }
+
+
 }

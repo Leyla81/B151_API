@@ -9,8 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
+import static org.testng.AssertJUnit.assertEquals;
 
-public class Get_ObjectMapper_Map extends JsonPlaceHolderBaseUrl {
+public class Get13_ObjectMapper_Map extends JsonPlaceHolderBaseUrl {
     /*
         Given
             https://jsonplaceholder.typicode.com/todos/198
@@ -49,7 +50,12 @@ spec.pathParams("first","todos","second",198);
      response.prettyPrint();
 
      //Do Assertion
-        
+       Map<String,Object>actualData = ObjectMapperUtils.convertJsonToJava(response.asString(), HashMap.class);
+       assertEquals(200,response.statusCode());
+
+       assertEquals(expectedData.get("userId"),actualData.get("userId"));
+       assertEquals(expectedData.get("title"),actualData.get("title"));
+       assertEquals(expectedData.get("completed"),actualData.get("completed"));
 
 
     }

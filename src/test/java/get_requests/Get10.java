@@ -52,7 +52,7 @@ import static org.junit.Assert.assertTrue;
                     .body("meta.pagination.links.current", equalTo("https://gorest.co.in/public/v1/users?page=1"))
                     .body("data", hasSize(10)) //Listler icin hamcret matchers da methodlar var
                     .body("data.status", hasItem("active"))
-                    .body("data.name", hasItems("Raj Singh JD", "Bilwa Pillai", "Damodara Tandon"));
+                    .body("data.name", hasItems("Dipali Gupta", "Sumitra Marar", "Gandharva Iyengar"));
 //.body("data.findAll{it.gender=='female'}.size()", lessThanOrEqualTo("data.findAll{it.gender=='male'}.size()"));
 
             JsonPath json = response.jsonPath();
@@ -60,7 +60,7 @@ import static org.junit.Assert.assertTrue;
             System.out.println("female List = " + femaleList.size());
             //"data.findAll{it.gender=='female'} ----->GROOVY lANGUAGE yazimi findAll ile baslar
             List<String> maleList = json.getList("data.findAll{it.gender=='male'}");
-
+            System.out.println(" male List : "+maleList.size());
 
             // assertTrue() metodu içerisinde Hamcrest Matchers metotları kullanılamaz
             assertTrue(femaleList.size() >= maleList.size());

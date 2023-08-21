@@ -1,2 +1,30 @@
-package pojos;public class BookingResponsePojo {
+package pojos;
+
+public class BookingResponsePojo {
+    private Integer bookingId;
+    private BookingPojo booking;
+
+    public BookingResponsePojo() {
+    }
+
+    public BookingResponsePojo(Integer bookingId, BookingPojo booking) {
+        this.bookingId = bookingId;
+        this.booking = booking;
+    }
+
+    public Integer getBookingId() {
+        return bookingId;
+    }
+
+    public void setBookingId(Integer bookingId) {
+        this.bookingId = bookingId;
+    }
+
+    public BookingPojo getBooking() {
+        return booking;
+    }
+
+    public void setBooking(BookingPojo booking) {
+        this.booking = booking;
+    }
 }
