@@ -1,0 +1,11 @@
+ogrendigimiz assertion yontemleri
+1. Hamcrest Matchers methodları
+2.JsonPath() --->methodu Get06 class'ı
+   baslıktan aldıgımız methodu container a koyabiliyorduk
+   ic ice json larda nokta koyup ulasabiliyorduk
+   Groovy language kullanabiliyorduk Groovy language listler ile kullana biliyorduk
+3.as() methodu ----> hem map ile hem de pojo ile kullandık
+        Map--->Get08
+        Pojo---Get12
+4.ObjectMapper.readvalue () methodu "Map"--->(Get13)
+  ObjedctMapper.readValue() methodu "Pojo"---->(Get13)
